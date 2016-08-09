@@ -1,0 +1,28 @@
+{
+  "name": "austere-tester",
+  "version": "1.0.0",
+  "description": "A humble tool to aid with testing JavaScript code",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "build": "npm run build:docs & npm run build:browser-tests",
+    "build:docs": "jsdoc2md index.js > docs/api.md",
+    "build:browser-tests": "browserify tests/index.js --debug -o tests/browser/tests.js",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "Dmitry Chekanov <d.chekanov@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "jsdoc-to-markdown": "^1.3.6"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dchekanov/austere-tester.git"
+  },
+  "bugs": "https://github.com/dchekanov/austere-tester/issues"
+}
