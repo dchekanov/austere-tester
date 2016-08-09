@@ -10,7 +10,9 @@ A humble tool to aid with testing JavaScript code.
 * No magic - no global variables, preserves tested functions context.
 * No bloat - zero dependencies, simple API, ~ 100 NCLOC.
 
-## Requirements 
+## Installation and usage
+
+### Requirements 
 
 The environment must provide a native or shimmed implementation of the following ES6 and ES5 features:
 
@@ -23,7 +25,7 @@ For native implementation, it translates to Node.js >= 4.0 and most modern brows
 
 Apply your favourite shims to use the module in older environments.
 
-## Installation and usage
+### Installation
 
 ```sh
 $ npm install austere-tester --save-dev
@@ -62,7 +64,7 @@ tester.plan('basic test', function() {
 tester.run('basic test');
 ```
 
-```sh
+```
 $ node examples/basic
 [austere-tester] run PASSED in 0 ms - basic test
 ```
