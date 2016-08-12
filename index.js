@@ -176,4 +176,4 @@ AustereTester.prototype.runAllInParallel = function() {
     });
 };
 
-module.exports = AustereTester;
+if (typeof module != 'undefined' && module.exports) module.exports = AustereTester;
