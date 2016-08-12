@@ -1,6 +1,6 @@
 {
   "name": "austere-tester",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A humble tool to aid with testing JavaScript code",
   "main": "index.js",
   "scripts": {
