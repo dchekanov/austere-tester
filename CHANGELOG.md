@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Extend readme
 - Use "files" property in the package.json instead of .npmignore
+- Update docs generator
 
 ## [1.0.2] - 2016-08-17
 ### Fixed
