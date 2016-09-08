@@ -24,5 +24,8 @@
     "type": "git",
     "url": "https://github.com/dchekanov/austere-tester.git"
   },
-  "bugs": "https://github.com/dchekanov/austere-tester/issues"
+  "bugs": "https://github.com/dchekanov/austere-tester/issues",
+  "files": [
+    "index.js"
+  ]
 }
