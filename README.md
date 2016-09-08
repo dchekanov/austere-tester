@@ -69,7 +69,38 @@ $ node examples/basic
 [austere-tester] run PASSED in 0 ms - basic test
 ```
 
-For a more complex example demonstrating async tests and serial and parallel running, please see [./examples/complex.js](./examples/complex.js) and API documentation.
+In many cases you can run synchronous tests like the one shown above without using special tools. 
+
+Taming asynchronyous tests is a more complicated task, since you need to put extra efforts to catch errors, 
+to handle timeouts, and often to perform operations in a strict order. 
+
+This is where `austere-tester` is most useful.
+
+Async tests can be planned like this:
+
+```javascript
+tester.plan('async with callback', function(finished) {
+  setTimeout(finished, 100);
+});
+
+tester.plan('async with promise', function() {
+  return new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100);
+  });
+});
+```
+
+When you need to run a set of tests:
+
+```javascript
+// runs all planned tests one by one, FIFO
+tester.runAll();
+
+// runs all planned tests in parallel
+tester.runAllInParallel();
+```
+
+For more examples demonstrating planning and running tests, please see [./examples/complex.js](./examples/complex.js) and API documentation.
  
 ## API
 
